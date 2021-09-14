@@ -1,3 +1,4 @@
+import link from 'next/link';
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -13,7 +14,7 @@ export const Container = styled.section`
 
   div > h1 {
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
     font-size: 1.5rem;
     line-height: 22px;
     color: #FFFFFF;
@@ -48,7 +49,7 @@ export const OpenMenuButton = styled.button`
 `;
 
 export const MenuData = styled.div`
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,8 +68,8 @@ export const MenuDataItems = styled.div`
 export const MenuDataItem = styled.button`
   font-style: normal;
   font-weight: normal;
-  font-size: 1.5rem;
-  line-height: 29px;
+  font-size: 2.5rem;
+  line-height: 5rem;
   color: #FFFFFF;
   border: 0;
   background-color: transparent;

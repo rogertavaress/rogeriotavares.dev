@@ -1,9 +1,7 @@
 import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
 import Post from '../types/post'
-import MenuTop from '../components/MenuTop'
 import Layout from '../components/Layout'
+import PostItem from '../components/PostItem'
 
 type Props = {
   allPosts: Post[]
@@ -14,7 +12,9 @@ const Index = ({ allPosts }: Props) => {
   const morePosts = allPosts.slice(1)
   return (
     <Layout>
-      <h1>Posts ficam aqui</h1>
+      {allPosts.map(item => (
+        <PostItem post={item} key={item.slug} />
+      ))}
     </Layout>
   )
 }
@@ -29,6 +29,7 @@ export const getStaticProps = async () => {
     'author',
     'coverImage',
     'excerpt',
+    'tags'
   ])
 
   return {

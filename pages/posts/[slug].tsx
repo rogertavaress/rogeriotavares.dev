@@ -5,6 +5,7 @@ import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import PostType from '../../types/post'
+import Layout from '../../components/Layout'
 
 type Props = {
   post: PostType
@@ -17,7 +18,20 @@ const Post = ({ post, morePosts, preview }: Props) => {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
-  return ( <h1>{post.title}</h1>
+  return ( 
+    <Layout>
+      {router.isFallback ? (
+        <h1>Carregando!</h1>
+      ): (
+        <h1>{post.title}</h1>
+      )}
+      <Head>
+        <title>
+          {post.title} | Rogério Tavares
+        </title>
+        <meta property="og:image" content={post.ogImage.url} />
+      </Head>
+    </Layout>
     // <Layout preview={preview}>
     //   <Container>
     //     <Header />

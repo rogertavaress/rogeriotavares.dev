@@ -1,11 +1,17 @@
 import ImagemProfile from '../ImagemProfile';
-
+import { useRouter } from 'next/router';
 import { Container, Titles, OpenMenuButton, MenuData, MenuDataItems, MenuDataItem } from './styles';
 import {RiMenu3Fill, RiCloseLine} from "react-icons/ri"
 import { useState } from 'react';
 
-const MenuTop = () => {
+const Menu = () => {
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = (href: string) => {
+    router.push(href);
+    setIsOpen(false);
+  }
 
   return (
   <>
@@ -22,9 +28,9 @@ const MenuTop = () => {
     {isOpen && (
       <MenuData>
         <MenuDataItems>
-          <MenuDataItem>Home</MenuDataItem>
-          <MenuDataItem>Sobre Mim</MenuDataItem>
-          <MenuDataItem>Resumé</MenuDataItem>
+          <MenuDataItem onClick={() => handleClick("/")} >Home</MenuDataItem>
+          <MenuDataItem onClick={() => handleClick("/")} >Sobre Mim</MenuDataItem>
+          <MenuDataItem onClick={() => handleClick("/")} >Resumé</MenuDataItem>
         </MenuDataItems>
       </MenuData>
     )}
@@ -32,4 +38,4 @@ const MenuTop = () => {
   );
 }
 
-export default MenuTop;
+export default Menu;
