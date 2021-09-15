@@ -6,13 +6,19 @@ export const Container = styled.div`
   align-items: center;
   padding: 1.8rem 1rem;
   border-bottom: 1px solid black;
+
+  &:hover {
+    div > h1 {
+      color: greenyellow;
+    }
+  }
 `;
 
 export const ImageMain = styled.img`
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  background-color: #FF6B00;
+  background-color: #ff6b00;
 `;
 
 export const Content = styled.div`
@@ -20,11 +26,11 @@ export const Content = styled.div`
 
   > h1 {
     font-size: 2rem;
-    overflow: hidden;
+    /* overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; */
     font-weight: 600;
   }
 
@@ -43,5 +49,3 @@ export const Content = styled.div`
     font-weight: 300;
   }
 `;
-
-

@@ -1,20 +1,24 @@
 import { format } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import React, { useMemo } from 'react';
-import Post from '../../types/post';
 import Link from 'next/link';
+import Post from '../../types/post';
 
-import { Container, ImageMain,Content } from './styles';
+import { Container, ImageMain, Content } from './styles';
 import TagGroup from '../TagGroup';
 
 interface PostItemProps {
-  post: Post
+  post: Post;
 }
 
-const PostItem: React.FC<PostItemProps> = ({post}) => {
-  const dateFormatted = useMemo(() => format(new Date(post.date), "dd' de 'MMMM' de 'yyyy", {
-    locale: ptBR
-  }),[post])
+const PostItem: React.FC<PostItemProps> = ({ post }) => {
+  const dateFormatted = useMemo(
+    () =>
+      format(new Date(post.date), "dd' de 'MMMM' de 'yyyy", {
+        locale: ptBR,
+      }),
+    [post],
+  );
   return (
     <Link href={`/posts/${post.slug}`}>
       <Container>
@@ -30,6 +34,6 @@ const PostItem: React.FC<PostItemProps> = ({post}) => {
       </Container>
     </Link>
   );
-}
+};
 
 export default PostItem;

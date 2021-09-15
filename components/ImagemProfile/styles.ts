@@ -12,5 +12,9 @@ export const Container = styled.div`
   div > img {
     width: 4rem;
     border-radius: 100%;
+
+    @media only screen and (min-width: 600px) {
+      width: 10rem;
+    }
   }
 `;

@@ -9,6 +9,6 @@ const ImagemProfile = () => {
       <Image src={ProfileImage} alt="" />
     </Container>
   );
-}
+};
 
 export default ImagemProfile;

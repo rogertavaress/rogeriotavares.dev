@@ -8,7 +8,7 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   html {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
 
@@ -22,21 +22,21 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   html {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 
@@ -49,7 +49,7 @@ body {
 body,
 input,
 button {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-variant-numeric: lining-nums;
 }

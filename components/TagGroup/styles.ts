@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const TagItem = styled.div`
-  background: #26282A;
+  background: #26282a;
   border-radius: 5px;
   font-size: 0.9rem;
   margin-right: 0.6rem;
