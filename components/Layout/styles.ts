@@ -10,4 +10,9 @@ export const Container = styled.div`
   }
 `;
 
-export const Body = styled.div``;
+export const Body = styled.div`
+
+  @media only screen and (min-width: 600px) {
+    margin-left: 30vw;
+  }
+`;
