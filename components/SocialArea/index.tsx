@@ -20,7 +20,7 @@ const SocialArea: React.FC = () => {
       <SocialButton onClick={() => handleClick("https://twitter.com/rogertavaress")}>
         <FaTwitter size={25} />
       </SocialButton>
-      <SocialButton onClick={() => handleClick("mailto:contact@rogeriotavares.dev")}>
+      <SocialButton onClick={() => handleClick("mailto:email@rogeriotavares.dev")}>
         <MdEmail size={25} />
       </SocialButton>
     </Container>
