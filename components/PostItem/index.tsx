@@ -19,6 +19,7 @@ const PostItem: React.FC<PostItemProps> = ({ post }) => {
       }),
     [post],
   );
+  
   return (
     <Link href={`/posts/${post.slug}`}>
       <Container>

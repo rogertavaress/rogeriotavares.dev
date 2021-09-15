@@ -6,6 +6,7 @@ import { CMS_NAME } from '../../lib/constants';
 import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
 import Layout from '../../components/Layout';
+import PostHeader from '../../components/PostHeader';
 
 type Props = {
   post: PostType;
@@ -20,9 +21,11 @@ const Post = ({ post, morePosts, preview }: Props) => {
   }
   return (
     <Layout>
-      {router.isFallback ? <h1>Carregando!</h1> : <h1>{post.title}</h1>}
+      {router.isFallback ? <h1>Carregando!</h1> : (
+        <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} excerpt={post.excerpt} />
+      )}
       <Head>
-        <title>{post.title} | Rogério Tavares</title>
+        <title>Rogério Tavares | {post.title}</title>
         <meta property="og:image" content={post.ogImage.url} />
       </Head>
     </Layout>
@@ -72,6 +75,7 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
+    'excerpt'
   ]);
   const content = await markdownToHtml(post.content || '');
 
