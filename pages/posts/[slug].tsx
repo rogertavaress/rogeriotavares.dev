@@ -7,6 +7,7 @@ import markdownToHtml from '../../lib/markdownToHtml';
 import PostType from '../../types/post';
 import Layout from '../../components/Layout';
 import PostHeader from '../../components/PostHeader';
+import PostBody from '../../components/PostBody';
 
 type Props = {
   post: PostType;
@@ -22,7 +23,10 @@ const Post = ({ post, morePosts, preview }: Props) => {
   return (
     <Layout>
       {router.isFallback ? <h1>Carregando!</h1> : (
-        <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} excerpt={post.excerpt} />
+        <>
+          <PostHeader title={post.title} coverImage={post.coverImage} date={post.date} excerpt={post.excerpt} />
+          <PostBody content={post.content} />
+        </>
       )}
       <Head>
         <title>Rogério Tavares | {post.title}</title>

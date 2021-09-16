@@ -15,10 +15,7 @@ export const Container = styled.div`
   }
 
   > p {
-    margin-top: 1rem;
-    
-    @media only screen and (min-width: 600px) {
-      font-size: 1.5rem;
-    }
+    margin-top: 1.2rem;
+    font-size: 1.7rem;
   }
 `;
