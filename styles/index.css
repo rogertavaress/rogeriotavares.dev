@@ -1,3 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-variant-numeric: lining-nums;
+  }
+
+  body {
+    background: #0e151b;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body, input, button {
+    font-family: Futura, -apple-system, sans-serif;
+    font-size: 16px;
+    font-variant-numeric: lining-nums;
+  }
+
+  h1, h2, h3, h4, h5, h6, strong {
+    font-weight: 500;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button:focus {
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+  }
