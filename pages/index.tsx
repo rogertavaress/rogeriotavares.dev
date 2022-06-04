@@ -1,7 +1,4 @@
 import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Menu from '../components/Menu'
 import Layout from '../components/layout'
 import { getAllPosts, getPosts } from '../lib/api'
 import Head from 'next/head'

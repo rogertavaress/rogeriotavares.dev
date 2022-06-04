@@ -8,7 +8,9 @@ import { Container, PagesArea, ContactsArea } from './styles';
 const Menu: React.FC = () => {
   return (
     <Container>
-      <h1>Rogério Tavares</h1>
+      <Link href="/">
+        <h1>Rogério Tavares</h1>
+      </Link>
       <PagesArea>
         <Link href="/posts">Publicações</Link>
         <Link href="/projects">Projetos</Link>

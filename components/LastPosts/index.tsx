@@ -2,7 +2,9 @@ import React from 'react';
 import SectionTitle from '../SectionTitle';
 import Post from "../../types/post";
 
-import { Container, PostArea, PostTitle, PostDescription, PostButton } from './styles';
+import { Container, PostItemContainer} from './styles';
+import Link from 'next/link';
+import PostItem from '../PostItem';
 
 interface LastPostsProps {
   posts: Post[];
@@ -13,12 +15,12 @@ const LastPosts: React.FC<LastPostsProps> = ({posts}) => {
   return (
     <Container>
       <SectionTitle>Publicadas recentemente</SectionTitle>
-      {posts?.map(item => (
-      <PostArea key={item.slug}>
-        <PostTitle>{item.title}</PostTitle>
-        <PostDescription>{item.excerpt}</PostDescription>
-        <PostButton>Ler mais</PostButton>
-      </PostArea>
+      {posts.map(item => (
+      <Link key={item.slug} as={`/posts/${item.slug}`} href="/posts/[slug]">
+        <PostItemContainer>
+          <PostItem title={item.title} description={item.excerpt} />
+        </PostItemContainer>
+      </Link>
       ))}
     </Container>
   );
