@@ -6,7 +6,9 @@ export const Container = styled.div`
   padding: 0;
   flex-direction: column;
   align-items: flex-end;
-  background-color: #212e35;
+  background: linear-gradient(rgba(33, 46, 53, 0.6), rgba(33, 46, 53, 0.6)),
+    url("/assets/others/backgroundhero.jpeg");
+  background-size: cover;
 `;
 
 export const Profile = styled.img`
